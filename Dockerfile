@@ -9,7 +9,8 @@ COPY . /app
 
 # Install dependencies
 RUN pip install --upgrade pip
-RUN pip install fastapi uvicorn python-multipart aiofiles pillow pytesseract pdfplumber sklearn spacy
+RUN pip install fastapi uvicorn python-multipart aiofiles pillow pytesseract pdfplumber scikit-learn spacy
+
 RUN python -m spacy download it_core_news_sm
 
 # Expose port
