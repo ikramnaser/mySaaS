@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Classifier</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background: #f9f9f9;
+    }
+    #upload-area {
+      border: 2px dashed #ccc;
+      padding: 2em;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 1em;
+    }
+    .hidden {
+      display: none;
+    }
+    #progress-container {
+      width: 100%;
+      background: #eee;
+      height: 20px;
+      margin: 1em 0;
+    }
+    #progress {
+      width: 0%;
+      height: 100%;
+      background: green;
+    }
+    #results-section {
+      margin-top: 2em;
+    }
+    .entity-group {
+      margin: 1em 0;
+    }
+    .entity-type {
+      font-weight: bold;
+      color: #333;
+    }
+    .entity-item {
+      padding: 0.25em;
+      margin-left: 1em;
+    }
+    #error-toast.show {
+      background: red;
+      color: white;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="error-toast" class="hidden">
+    <span id="error-message"></span>
+    <button id="close-error">×</button>
+  </div>
+
+  <div id="upload-area">Click or drop a file (PDF or image)</div>
+
+  <div id="selected-file" class="hidden">
+    <p><strong>Selected File:</strong> <span id="file-name"></span> (<span id="file-size"></span>)</p>
+    <button id="process-btn">Process</button>
+  </div>
+
+  <div id="progress-container" class="hidden">
+    <div id="progress"></div>
+  </div>
+
+  <div id="results-section" class="hidden">
+    <h2>Results</h2>
+    <p><strong>Document Type:</strong> <span id="doc-type"></span> (<span id="doc-confidence"></span>)</p>
+
+    <h3>Entities Found</h3>
+    <div id="entities-result"></div>
+
+    <h3>Extracted Text</h3>
+    <pre id="extracted-text"></pre>
+
+    <button id="new-upload-btn">Upload Another</button>
+  </div>
+
+  <input type="file" id="file-input" class="hidden" />
+
+  <script src="front-app.js"></script>
+</body>
+</html>
 
