@@ -8,10 +8,15 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
+COPY requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install fastapi uvicorn python-multipart aiofiles pillow pytesseract pdfplumber scikit-learn spacy
+RUN pip install -r requirements.txt
+
+RUN apt-get update && apt-get install -y poppler-utils
 
 RUN python -m spacy download it_core_news_sm
+RUN pip install fastapi uvicorn python-multipart aiofiles pillow pytesseract pdfplumber scikit-learn spacy
+
 
 # Expose port
 EXPOSE 8000
