@@ -1,12 +1,12 @@
-# 📄 Document Processing SaaS Platform
+# Document Processing SaaS Platform
 
 > A full-stack intelligent document processing platform that transforms PDFs and images into structured data using AI/ML technologies.
 
-## 🚀 Overview
+## Overview
 
 This project demonstrates a production-ready SaaS platform that automatically processes documents using advanced AI/ML techniques. The system extracts text from PDFs and images, classifies documents by type, and identifies named entities - all through an intuitive web interface.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    HTTP/JSON    ┌──────────────────┐
@@ -26,7 +26,7 @@ This project demonstrates a production-ready SaaS platform that automatically pr
                                     └──────────────────┘
 ```
 
-## ✨ Key Features
+## Key Features
 
 - **Intelligent Text Extraction**: Handles both text-based and scanned PDFs using OCR
 - **Document Classification**: ML-powered categorization (invoices, contracts, letters, reports)
@@ -35,7 +35,7 @@ This project demonstrates a production-ready SaaS platform that automatically pr
 - **Responsive UI**: Modern drag-and-drop interface with real-time progress
 - **Production Ready**: Containerized with Docker for easy deployment
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 - **FastAPI** - High-performance Python web framework
