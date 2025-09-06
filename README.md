@@ -9,7 +9,7 @@ This project demonstrates a production-ready SaaS platform that automatically pr
 ## Architecture
 
 ```
-┌─────────────────┐    HTTP/JSON    ┌──────────────────┐
+┌─────────────────┐    HTTP/JSON     ┌──────────────────┐
 │   Frontend      │ ◄──────────────► │   FastAPI        │
 │   (HTML/JS)     │                  │   Backend        │
 └─────────────────┘                  └──────────────────┘
@@ -39,7 +39,7 @@ This project demonstrates a production-ready SaaS platform that automatically pr
 
 ### Backend
 - **FastAPI** - High-performance Python web framework
-- **spaCy** - Advanced NLP library for entity recognition
+- **spaCy** - NLP library for entity recognition
 - **Tesseract OCR** - Optical character recognition engine
 - **scikit-learn** - Machine learning for document classification
 - **pdfplumber** - PDF text extraction and parsing
